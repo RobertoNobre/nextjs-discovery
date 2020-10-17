@@ -32,7 +32,7 @@ export default function Top10({ products }: Top10Props) {
 
 //generate static pages in build, and refresh in 60s
 export const getStaticProps: GetStaticProps<Top10Props> = async (context) => {
-  const response = await fetch('http://localhost:3333/products');
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
   const products = await response.json();
 
   return {
