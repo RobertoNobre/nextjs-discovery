@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { Title } from '../styles/pages/home';
+import { Title } from '@/styles/pages/home';
 
 interface IProduct {
   id: string;
@@ -12,7 +12,7 @@ interface HomeProps {
 
 export default function Home({ recommendedProducts }: HomeProps) {
   async function handleSum(){
-    const { sum } = (await import('../lib/math')).default;
+    const { sum } = (await import('@/lib/math')).default;
     alert(sum(2, 5));
   }
   
