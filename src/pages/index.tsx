@@ -1,7 +1,9 @@
+import { Title } from '../styles/pages/home';
+
 export default function Home() {
   return (
     <div>
-      <h1>hey nextjs</h1>
+      <Title>hey nextjs</Title>
     </div>
   )
 }
