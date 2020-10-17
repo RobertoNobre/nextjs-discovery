@@ -30,6 +30,7 @@ export default function Home({ recommendedProducts }: HomeProps) {
   )
 }
 
+//server side rendering => indexed by crowlers
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   const response = await fetch('http://localhost:3333/recommended');
   const recommendedProducts = await response.json();
