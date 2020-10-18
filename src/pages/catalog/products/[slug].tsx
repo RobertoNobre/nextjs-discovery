@@ -31,7 +31,9 @@ export default function Product({ product }: ProductProps) {
   return (
     <div>
       <h1>{PrismicDOM.RichText.asText(product.data.title)}</h1>
-      <img src={product.data.thumnail.url} alt={product.data.thumnail.alt}/>
+
+      <img src={product.data.thumnail.list.url} alt={product.data.thumnail.list.alt}/>
+
       <div
         dangerouslySetInnerHTML={{
           __html: PrismicDOM.RichText.asHtml(product.data.description),
